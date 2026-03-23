@@ -1,2 +1,3 @@
 # Bio-Portfolio-PS4ti
 Github zadanie.
+<a href="https://aurelemonius.github.io/Bio-Portfolio-PS4ti/Bio-Portfolio-Template.html">Strona przykładowa</a>
