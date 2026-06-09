@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twoje PS - Portfolio</title>
+    <title>Twoje Imię i Nazwisko - Portfolio</title>
     <style>
         :root {
             --bg: #f8f9fa;
@@ -70,16 +70,6 @@
             transform: translateX(8px);
         }
 
-        /* Aktywne podświetlenie menu */
-        .nav-btn {
-            position: relative;
-        }
-
-        #portfolio:target ~ .nav-buttons a[href="#portfolio"],
-        #about:target ~ .nav-buttons a[href="#about"],
-        #blog:target ~ .nav-buttons a[href="#blog"],
-        /* Domyślne portfolio przy wejściu na stronę */
-
         /* === GŁÓWNA TREŚĆ === */
         .main-content {
             margin-left: 260px;
@@ -101,15 +91,41 @@
             font-size: 1.3rem;
         }
 
+        /* Ukrywanie wszystkich sekcji */
         section {
             display: none;
             margin-bottom: 5rem;
         }
 
-        /* Pokazywanie sekcji */
-        section:target,
+        /* Pokazywanie sekcji po kliknięciu */
+        #portfolio:target,
+        #about:target,
+        #blog:target {
+            display: block;
+        }
+
+        /* Domyślnie pokazujemy portfolio */
         #portfolio {
             display: block;
+        }
+
+        /* Podświetlenie aktywnego przycisku */
+        .nav-btn[href="#portfolio"]:target,
+        #portfolio:target ~ .nav-buttons .nav-btn[href="#portfolio"],
+        .nav-btn[href="#about"]:target,
+        #about:target ~ .nav-buttons .nav-btn[href="#about"],
+        .nav-btn[href="#blog"]:target,
+        #blog:target ~ .nav-buttons .nav-btn[href="#blog"] {
+            background: #f1f2f6;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Domyślne podświetlenie portfolio przy wejściu */
+        body:not(:has(#about:target)):not(:has(#blog:target)) .nav-btn[href="#portfolio"] {
+            background: #f1f2f6;
+            color: var(--accent);
+            font-weight: 600;
         }
 
         /* === STOPKA === */
@@ -143,19 +159,16 @@
             <p class="subtitle">Jestem [Twoje Imię] — uczeń 4TI</p>
         </header>
 
-        <!-- Sekcja Portfolio -->
         <section id="portfolio">
             <h2>Portfolio</h2>
             <p>Tutaj będą Twoje projekty...</p>
         </section>
 
-        <!-- Sekcja O mnie -->
         <section id="about">
             <h2>O mnie</h2>
-            <p>Tu możesz napisać kilka słów o sobie, zainteresowaniach, celach itp.</p>
+            <p>Tu możesz napisać kilka słów o sobie...</p>
         </section>
 
-        <!-- Sekcja Blog -->
         <section id="blog">
             <h2>Blog</h2>
             <p>Tu będą wpisy blogowe...</p>
@@ -168,5 +181,4 @@
     </footer>
 
 </body>
-</html>
 </html>
