@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twoje Imię i Nazwisko - Portfolio</title>
+    <title>Twoje PS - Portfolio</title>
     <style>
         :root {
             --bg: #f8f9fa;
@@ -79,11 +79,6 @@
         #about:target ~ .nav-buttons a[href="#about"],
         #blog:target ~ .nav-buttons a[href="#blog"],
         /* Domyślne portfolio przy wejściu na stronę */
-        body:not(:has(#about:target)):not(:has(#blog:target)) .nav-buttons a[href="#portfolio"] {
-            background: #f1f2f6;
-            color: var(--accent);
-            font-weight: 600;
-        }
 
         /* === GŁÓWNA TREŚĆ === */
         .main-content {
