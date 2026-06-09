@@ -1,5 +1,4 @@
-Oto wersja bez żadnego JavaScript:
-HTML<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +25,6 @@ HTML<!DOCTYPE html>
             line-height: 1.6;
             display: flex;
             min-height: 100vh;
-            scroll-behavior: smooth;
         }
 
         /* === PASEK BOCZNY === */
@@ -56,7 +54,6 @@ HTML<!DOCTYPE html>
 
         .nav-btn {
             padding: 14px 20px;
-            border: none;
             background: transparent;
             text-align: left;
             font-size: 1.05rem;
@@ -73,8 +70,12 @@ HTML<!DOCTYPE html>
             transform: translateX(8px);
         }
 
-        .nav-btn:active {
-            background: #e2e6ea;
+        /* Aktywny przycisk */
+        .nav-btn:target,
+        .nav-btn.active {
+            background: #f1f2f6;
+            color: var(--accent);
+            font-weight: 600;
         }
 
         /* === GŁÓWNA TREŚĆ === */
@@ -99,7 +100,18 @@ HTML<!DOCTYPE html>
         }
 
         section {
+            display: none;
             margin-bottom: 5rem;
+        }
+
+        /* Pokazywanie sekcji za pomocą :target */
+        section:target {
+            display: block;
+        }
+
+        /* Domyślne pokazanie portfolio */
+        #portfolio {
+            display: block;
         }
 
         /* === STOPKA === */
@@ -120,7 +132,7 @@ HTML<!DOCTYPE html>
         <div class="logo">Twoje Imię</div>
         
         <div class="nav-buttons">
-            <a href="#portfolio" class="nav-btn">Portfolio</a>
+            <a href="#portfolio" class="nav-btn active">Portfolio</a>
             <a href="#about" class="nav-btn">O mnie</a>
             <a href="#blog" class="nav-btn">Blog</a>
         </div>
@@ -130,7 +142,7 @@ HTML<!DOCTYPE html>
     <main class="main-content">
         <header>
             <h1>Witaj</h1>
-            <p class="subtitle">Jestem Piotr Stafiński — uczeń 4TI</p>
+            <p class="subtitle">Jestem [Twoje Imię] — uczeń 4TI</p>
         </header>
 
         <!-- Sekcja Portfolio -->
@@ -142,7 +154,7 @@ HTML<!DOCTYPE html>
         <!-- Sekcja O mnie -->
         <section id="about">
             <h2>O mnie</h2>
-            <p>Cos o mnie</p>
+            <p>Tu możesz napisać kilka słów o sobie, zainteresowaniach, celach itp.</p>
         </section>
 
         <!-- Sekcja Blog -->
