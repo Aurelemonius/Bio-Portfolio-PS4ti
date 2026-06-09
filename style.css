@@ -1,0 +1,120 @@
+<style>
+        :root {
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --accent: #636e72;
+            --light-accent: #b2bec3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: white;
+            border-right: 1px solid #dfe6e9;
+            padding: 2rem 1.5rem;
+            position: fixed;
+            height: 100vh;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--accent);
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .nav-btn {
+            padding: 14px 20px;
+            background: transparent;
+            text-align: left;
+            font-size: 1.05rem;
+            color: var(--text);
+            border-radius: 12px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-btn:hover {
+            background: #f1f2f6;
+            color: var(--accent);
+            transform: translateX(8px);
+        }
+
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 3rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--light-accent);
+            font-size: 1.3rem;
+        }
+
+        section {
+            display: none;
+            margin-bottom: 5rem;
+        }
+
+        /* Pokazywanie sekcji po kliknięciu */
+        #portfolio:target,
+        #about:target,
+        #blog:target {
+            display: block;
+        }
+
+
+        .nav-btn[href="#portfolio"]:target,
+        #portfolio:target ~ .nav-buttons .nav-btn[href="#portfolio"],
+        .nav-btn[href="#about"]:target,
+        #about:target ~ .nav-buttons .nav-btn[href="#about"],
+        .nav-btn[href="#blog"]:target,
+        #blog:target ~ .nav-buttons .nav-btn[href="#blog"] {
+            background: #f1f2f6;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem 3rem;
+            text-align: center;
+            color: var(--light-accent);
+            font-size: 0.95rem;
+            border-top: 1px solid #dfe6e9;
+        }
+    </style>
