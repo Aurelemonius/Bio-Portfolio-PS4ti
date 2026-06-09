@@ -1,6 +1,161 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1>PIOTR STAFIŃSKI 4ti</h1>
-    </body>
+Oto wersja bez żadnego JavaScript:
+HTML<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoje Imię i Nazwisko - Portfolio</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --accent: #636e72;
+            --light-accent: #b2bec3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        /* === PASEK BOCZNY === */
+        .sidebar {
+            width: 260px;
+            background: white;
+            border-right: 1px solid #dfe6e9;
+            padding: 2rem 1.5rem;
+            position: fixed;
+            height: 100vh;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--accent);
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .nav-btn {
+            padding: 14px 20px;
+            border: none;
+            background: transparent;
+            text-align: left;
+            font-size: 1.05rem;
+            color: var(--text);
+            border-radius: 12px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-btn:hover {
+            background: #f1f2f6;
+            color: var(--accent);
+            transform: translateX(8px);
+        }
+
+        .nav-btn:active {
+            background: #e2e6ea;
+        }
+
+        /* === GŁÓWNA TREŚĆ === */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 3rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--light-accent);
+            font-size: 1.3rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        /* === STOPKA === */
+        footer {
+            margin-top: auto;
+            padding: 2rem 3rem;
+            text-align: center;
+            color: var(--light-accent);
+            font-size: 0.95rem;
+            border-top: 1px solid #dfe6e9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PASEK BOCZNY -->
+    <aside class="sidebar">
+        <div class="logo">Twoje Imię</div>
+        
+        <div class="nav-buttons">
+            <a href="#portfolio" class="nav-btn">Portfolio</a>
+            <a href="#about" class="nav-btn">O mnie</a>
+            <a href="#blog" class="nav-btn">Blog</a>
+        </div>
+    </aside>
+
+    <!-- GŁÓWNA TREŚĆ -->
+    <main class="main-content">
+        <header>
+            <h1>Witaj</h1>
+            <p class="subtitle">Jestem [Twoje Imię] — uczeń 4TI</p>
+        </header>
+
+        <!-- Sekcja Portfolio -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Tutaj będą Twoje projekty...</p>
+        </section>
+
+        <!-- Sekcja O mnie -->
+        <section id="about">
+            <h2>O mnie</h2>
+            <p>Tu możesz napisać kilka słów o sobie, zainteresowaniach, celach itp.</p>
+        </section>
+
+        <!-- Sekcja Blog -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Tu będą wpisy blogowe...</p>
+        </section>
+    </main>
+
+    <!-- STOPKA -->
+    <footer>
+        to jest stopka bo tak
+    </footer>
+
+</body>
 </html>
